@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezzet Durağı - Menü</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+        
+        header {
+            text-align: center;
+            padding: 25px 20px;
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .menu-content {
+            padding: 30px;
+        }
+        
+        .menu-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #4b6cb7;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ff7e5f;
+        }
+        
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .menu-item {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 15px;
+        }
+        
+        .item-info {
+            flex: 1;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        
+        .item-desc {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 5px 0;
+        }
+        
+        .item-price {
+            color: #ff7e5f;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .deployment-help {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        .deployment-help h2 {
+            color: #182848;
+            margin-bottom: 15px;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .step {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            background: #4b6cb7;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lezzet Durağı Restoran</h1>
+            <p>Geleneksel ve Modern Lezzetler</p>
+        </header>
+        
+        <div class="menu-content">
+            <div class="menu-section">
+                <h2 class="section-title">Kahvaltı</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-title">Serpme Kahvaltı</div>
+                            <div class="item-desc">Peynir çeşitleri, zeytin, bal, kaymak, reçel, yumurta ve söğüş</div>
+                            <div class="item-price">₺175</div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-title">Menemen</div>
+                            <div class="item-desc">Özel yumurta, domates, biber ve isteğe bağlı peynir ile</div>
+                            <div class="item-price">₺65</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-section">
+                <h2 class="section-title">Ana Yemekler</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-title">Kebap Tabağı</div>
+                            <div class="item-desc">Adana, urfa, tavuk şiş ve kuzu şiş kebap çeşitleri</div>
+                            <div class="item-price">₺220</div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-title">Lahmacun</div>
+                            <div class="item-desc">İnce hamur üzerine özel harçla yapılan geleneksel lezzet</div>
+                            <div class="item-price">₺35</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-section">
+                <h2 class="section-title">İçecekler</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-title">Türk Kahvesi</div>
+                            <div class="item-desc">Geleneksel yöntemlerle pişirilmiş Türk kahvesi</div>
+                            <div class="item-price">₺25</div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-title">Ayran</div>
+                            <div class="item-desc">Geleneksel serinletici yoğurt içeceği</div>
+                            <div class="item-price">₺15</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="deployment-help">
+        <h2>Web Sayfanızı Yayınlama Adımları</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>GitHub Pages (Ücretsiz)</h3>
+                <p>GitHub'da hesap oluşturun, yeni repository açın, HTML dosyanızı yükleyin ve Settings > Pages kısmından yayına alın.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Netlify (Ücretsiz)</h3>
+                <p>Netlify.com'a gidin, hesap oluşturun, dosyanızı sürükle-bırak ile yükleyin ve anında yayınlanmış olacak.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Hosting Satın Alma</h3>
+                <p>Hosting firmasından hosting paketi satın alın, FTP bilgilerinizle FileZilla gibi bir programla dosyalarınızı yükleyin.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>QR kodunu okuttuğunuz için teşekkürler! | İyi yemekler dileriz.</p>
+    </footer>
+</body>
+</html>
