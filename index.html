@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sokak Lezzetleri - Menü</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        
+        .menu-category {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .category-title {
+            color: #ff6b6b;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #ff6b6b;
+        }
+        
+        .category-title i {
+            margin-right: 10px;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-info {
+            flex: 2;
+        }
+        
+        .item-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .item-desc {
+            color: #777;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        
+        .item-price {
+            flex: 1;
+            text-align: right;
+            font-weight: bold;
+            color: #ff6b6b;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+            background-color: #f8f8f8;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-item {
+                flex-direction: column;
+            }
+            
+            .item-price {
+                text-align: left;
+                margin-top: 5px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .category-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MENÜ</h1>
+            <div class="contact">
+                <i class="fas fa-phone"></i> 0543 644 47 15
+            </div>
+        </header>
+        
+        <div class="menu-category">
+            <h2 class="category-title">
+                <i class="fas fa-bread-slice"></i> Kahvaltılıklar
+            </h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Kaşarlı Tost</div>
+                    <div class="item-desc">cheese toast</div>
+                </div>
+                <div class="item-price">100.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Sucuklu Tost</div>
+                    <div class="item-desc">sausage toast</div>
+                </div>
+                <div class="item-price">140.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Karışık Tost</div>
+                    <div class="item-desc">mixed toast</div>
+                </div>
+                <div class="item-price">140.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Simit</div>
+                    <div class="item-desc">bagel</div>
+                </div>
+                <div class="item-price">15.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Kahvaltı Tabağı</div>
+                    <div class="item-desc">breakfast menu</div>
+                </div>
+                <div class="item-price">150.00 t</div>
+            </div>
+        </div>
+        
+        <div class="menu-category">
+            <h2 class="category-title">
+                <i class="fas fa-utensils"></i> Sokak Lezzetleri
+            </h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Haşlanmış Mısır</div>
+                    <div class="item-desc">boiled corn</div>
+                </div>
+                <div class="item-price">80.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Bardakta Mısır</div>
+                    <div class="item-desc">corn in glass</div>
+                </div>
+                <div class="item-price">50.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Osmanlı Macunu</div>
+                    <div class="item-desc">ottoman candy</div>
+                </div>
+                <div class="item-price">50.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Şekerlemeler</div>
+                    <div class="item-desc">candys</div>
+                </div>
+                <div class="item-price">30.00 t</div>
+            </div>
+        </div>
+        
+        <div class="menu-category">
+            <h2 class="category-title">
+                <i class="fas fa-coffee"></i> Sıcak İçecekler
+            </h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Çay</div>
+                    <div class="item-desc">tea</div>
+                </div>
+                <div class="item-price">25.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Türk Kahvesi</div>
+                    <div class="item-desc">turkish coffee</div>
+                </div>
+                <div class="item-price">75.00 t</div>
+            </div>
+        </div>
+        
+        <div class="menu-category">
+            <h2 class="category-title">
+                <i class="fas fa-hamburger"></i> Yiyecekler
+            </h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Çiğ Köfte Dürüm</div>
+                    <div class="item-desc">raw meatball</div>
+                </div>
+                <div class="item-price">75.00 t - 90.00 t - 120.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Tavuk Ekmek</div>
+                    <div class="item-desc">chicken sandwich</div>
+                </div>
+                <div class="item-price">150.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Köfte Ekmek</div>
+                    <div class="item-desc">meatball sandwich</div>
+                </div>
+                <div class="item-price">250.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Kokoreç</div>
+                    <div class="item-desc">roasted sheep's intestines</div>
+                </div>
+                <div class="item-price">300.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Hamburger</div>
+                    <div class="item-desc">hamburger</div>
+                </div>
+                <div class="item-price">300.00 t</div>
+            </div>
+        </div>
+        
+        <div class="menu-category">
+            <h2 class="category-title">
+                <i class="fas fa-glass-whiskey"></i> Soğuk İçecekler
+            </h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Kola</div>
+                    <div class="item-desc">cola</div>
+                </div>
+                <div class="item-price">60.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Gazoz</div>
+                    <div class="item-desc">soda</div>
+                </div>
+                <div class="item-price">60.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Soğuk Çay</div>
+                    <div class="item-desc">ice tea</div>
+                </div>
+                <div class="item-price">60.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Şalgam</div>
+                    <div class="item-desc">turnip juice</div>
+                </div>
+                <div class="item-price">40.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Ayran</div>
+                    <div class="item-desc">buttermilk</div>
+                </div>
+                <div class="item-price">25.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Meyve Suyu</div>
+                    <div class="item-desc">fruit juice</div>
+                </div>
+                <div class="item-price">60.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Limonata</div>
+                    <div class="item-desc">lemonade</div>
+                </div>
+                <div class="item-price">40.00 t</div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Su</div>
+                    <div class="item-desc">water</div>
+                </div>
+                <div class="item-price">15.00 t</div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="logo">Sokak Lezzetleri</div>
+            <p>Lezzetin adresi</p>
+        </footer>
+    </div>
+</body>
+</html>
