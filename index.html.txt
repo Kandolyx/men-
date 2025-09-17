@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sokak Lezzetleri - Menü</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        
+        .menu-category {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .category-title {
+            color: #ff6b6b;
+            border-bottom: 2px solid #ff6b6b;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .category-title i {
+            margin-right: 10px;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-info {
+            flex: 2;
+        }
+        
+        .item-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .item-desc {
+            color: #777;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        
+        .item-price {
+            flex: 1;
+            text-align: right;
+            font-weight: bold;
+            color: #ff6b6b;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #777;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-item {
+                flex-direction: column;
+            }
+            
+            .item-price {
+                text-align: left;
+                margin-top: 5px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .category-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MENÜ</h1>
+            <div class="contact">
+                <i class="fas fa-phone"></i> 0543 644 47 15
+            </div>
+        </header>
+        
+        <div id="menu-container">
+            <!-- Menü içeriği JavaScript ile buraya eklenecek -->
+        </div>
+        
+        <footer>
+            <div class="logo">Sokak Lezzetleri</div>
+            <p>Lezzetin adresi</p>
+        </footer>
+    </div>
+
+    <script>
+        // Menü verileri - Bu kısmı düzenleyerek fiyatları değiştirebilirsiniz
+        const menuData = {
+            "categories": [
+                {
+                    "name": "Kahvaltılıklar",
+                    "icon": "fa-bread-slice",
+                    "items": [
+                        {"name": "Kaşarlı Tost", "description": "cheese toast", "price": "100.00 t"},
+                        {"name": "Sucuklu Tost", "description": "sausage toast", "price": "140.00 t"},
+                        {"name": "Karışık Tost", "description": "mixed toast", "price": "140.00 t"},
+                        {"name": "Simit", "description": "bagel", "price": "15.00 t"},
+                        {"name": "Kahvaltı Tabağı", "description": "breakfast menu", "price": "150.00 t"}
+                    ]
+                },
+                {
+                    "name": "Sokak Lezzetleri",
+                    "icon": "fa-utensils",
+                    "items": [
+                        {"name": "Haşlanmış Mısır", "description": "boiled corn", "price": "80.00 t"},
+                        {"name": "Bardakta Mısır", "description": "corn in glass", "price": "50.00 t"},
+                        {"name": "Osmanlı Macunu", "description": "ottoman candy", "price": "50.00 t"},
+                        {"name": "Şekerlemeler", "description": "candys", "price": "30.00 t"}
+                    ]
+                },
+                {
+                    "name": "Sıcak İçecekler",
+                    "icon": "fa-coffee",
+                    "items": [
+                        {"name": "Çay", "description": "tea", "price": "25.00 t"},
+                        {"name": "Türk Kahvesi", "description": "turkish coffee", "price": "75.00 t"}
+                    ]
+                },
+                {
+                    "name": "Yiyecekler",
+                    "icon": "fa-hamburger",
+                    "items": [
+                        {"name": "Çiğ Köfte Dürüm", "description": "raw meatball", "price": "75.00 t - 90.00 t - 120.00 t"},
+                        {"name": "Tavuk Ekmek", "description": "chicken sandwich", "price": "150.00 t"},
+                        {"name": "Köfte Ekmek", "description": "meatball sandwich", "price": "250.00 t"},
+                        {"name": "Kokoreç", "description": "roasted sheep's intestines", "price": "300.00 t"},
+                        {"name": "Hamburger", "description": "hamburger", "price": "300.00 t"}
+                    ]
+                },
+                {
+                    "name": "Soğuk İçecekler",
+                    "icon": "fa-glass-whiskey",
+                    "items": [
+                        {"name": "Kola", "description": "cola", "price": "60.00 t"},
+                        {"name": "Gazoz", "description": "soda", "price": "60.00 t"},
+                        {"name": "Soğuk Çay", "description": "ice tea", "price": "60.00 t"},
+                        {"name": "Şalgam", "description": "turnip juice", "price": "40.00 t"},
+                        {"name": "Ayran", "description": "buttermilk", "price": "25.00 t"},
+                        {"name": "Meyve Suyu", "description": "fruit juice", "price": "60.00 t"},
+                        {"name": "Limonata", "description": "lemonade", "price": "40.00 t"},
+                        {"name": "Su", "description": "water", "price": "15.00 t"}
+                    ]
+                }
+            ]
+        };
+
+        // Menüyü oluştur
+        function renderMenu() {
+            const menuContainer = document.getElementById('menu-container');
+            menuContainer.innerHTML = '';
+            
+            menuData.categories.forEach(category => {
+                const categoryElement = document.createElement('div');
+                categoryElement.className = 'menu-category';
+                
+                categoryElement.innerHTML = `
+                    <h2 class="category-title">
+                        <i class="fas ${category.icon}"></i> ${category.name}
+                    </h2>
+                `;
+                
+                category.items.forEach(item => {
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'menu-item';
+                    itemElement.innerHTML = `
+                        <div class="item-info">
+                            <div class="item-name">${item.name}</div>
+                            <div class="item-desc">${item.description}</div>
+                        </div>
+                        <div class="item-price">${item.price}</div>
+                    `;
+                    
+                    categoryElement.appendChild(itemElement);
+                });
+                
+                menuContainer.appendChild(categoryElement);
+            });
+        }
+        
+        // Sayfa yüklendiğinde menüyü oluştur
+        document.addEventListener('DOMContentLoaded', renderMenu);
+    </script>
+</body>
+</html>
